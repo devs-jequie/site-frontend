@@ -1,0 +1,12 @@
+.inputButton{
+    appearance: none;
+	-webkit-appearance: none;
+	padding:10px 2%;
+	border: none;
+	width: 10rem;
+	border-radius: 8px;
+	font-weight: 600;
+	color: #fff;
+	background-color: #3831A0;
+    margin-top: 10px;
+}
