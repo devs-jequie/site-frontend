@@ -4,7 +4,12 @@ export default function InputTextArea(props) {
   return (
     <div>
       <div>{titulo}</div>
-      <textarea className={style.inputArea} name={name} placeholder={placeholder} id={id} />
+      <textarea
+        className={style.inputArea}
+        name={name}
+        placeholder={placeholder}
+        id={id}
+      />
     </div>
   );
 }
