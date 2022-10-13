@@ -9,3 +9,23 @@ body {
 * {
   box-sizing: border-box;
 }
+
+button:hover {
+  background-color: #413d84;
+}
+
+.danger {
+  background-color: #ed413b !important;
+}
+
+.warn {
+  background-color: #e7e757 !important;
+}
+
+.info {
+  background-color: #619be2 !important;
+}
+
+.success {
+  background-color: #4abb5e !important;
+}
