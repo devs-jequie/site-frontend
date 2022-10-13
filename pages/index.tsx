@@ -10,9 +10,9 @@ export default function Home() {
     <div className={styles.container}>
       <h1>Ola Mundo</h1>
 
-      <InputButton title="Teste" danger />
+      <InputButton title="Teste" />
 
-      <Input title="Digite seu nome" invalid />
+      <Input title="Digite seu nome" />
 
       <TextArea />
 
