@@ -69,14 +69,14 @@ export default function Login() {
           <InputButton
             title="GG"
             className="small-button"
-            name="Google"
+            name="google"
             onClick={loginSocial}
             style={{ padding: 10, margin: 10 }}
           />
           <InputButton
             title="GH"
             className="small-button"
-            name="Github"
+            name="github"
             onClick={loginSocial}
             style={{ padding: 10 }}
           />
