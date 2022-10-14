@@ -1,0 +1,77 @@
+.container {
+  padding: 15px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #e1e1e1;
+}
+
+.inputContainer {
+  width: 390px;
+  min-height: 80vh;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0px;
+  padding: 77px 55px 33px;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+}
+
+.form {
+  display: block;
+}
+
+.title {
+  display: block;
+  font-size: 39px;
+  color: #333;
+  line-height: 1.2;
+  text-align: center;
+}
+.inputContainer10 {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.loginSocialContainer,
+.cancelOrLoginContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.loginSocialContainer {
+  justify-content: center;
+}
+
+.cancelOrLoginContainer {
+  /* justify-content: space-between; */
+  justify-content: center;
+}
+
+/* .cancelButton {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 8px 2%;
+  border: none;
+  min-width: 10rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #3831a0;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+} */
+
+.textOptionalLoginContainer{
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+}
