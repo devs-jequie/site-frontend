@@ -18,9 +18,9 @@ export default function Home() {
 
       <Input title="Digite seu nome" />
 
-      <TextArea />
+      <TextArea title="Descrição"/>
 
-      <InputUpload />
+      <InputUpload id="upload" placeholder="selecione um arquivo" title="Imagem"/>
     </div>
   );
 }
