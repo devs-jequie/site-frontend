@@ -1,0 +1,54 @@
+.containerLabel{
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    font-size: 12px;
+    color: #424242;
+    font-weight: 400;
+  
+  }
+  
+  .containerLabel input{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  
+  }
+  
+  .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border: 1px solid #3831a0;
+    border-radius: 2px;
+  }
+  .containerLabel input:checked ~ .checkmark{
+    background-color: #3831a0;
+    border: none;
+  }
+  
+  .checkmark::after{
+    display: none;
+    content: '';
+    position: absolute;
+  }
+
+  .containerLabel .checkmark::after{
+    content: '';
+   left: 4px;
+   top: 0px;
+   width: 5px;
+   height: 9px;
+   transform: rotate(45deg);
+   border-right: 3px solid #fff;
+   border-bottom: 3px solid #fff;
+  
+  }
+  
+  .containerLabel input:checked ~ .checkmark::after{
+    display: block;
+  }

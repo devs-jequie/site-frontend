@@ -1,0 +1,99 @@
+.container {
+  padding: 10px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #e1e1e1;
+}
+
+.inputContainer {
+  width: 390px;
+  min-height: 90vh;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 50px 50px 33px;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+  font-size: small;
+}
+
+.title {
+  display: block;
+  font-size: 50px;
+  color: #333;
+  line-height: 1.2;
+  text-align: center;
+  padding: 10px;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.inputContainer10 {
+  width: 100%;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.rememberMeForgotPassword{
+  display: flex;
+  align-content: baseline;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.buttonLoginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.textOptionalLoginContainer {
+  font-weight: 300;
+  font-size: 12px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.loginSocialContainer {
+  display: flex;
+  margin: 0.3rem 3rem;
+  width: 70%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.loginSocialItem,
+.registerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerContainer {
+  text-decoration: none;
+  font-size: 13px;
+  color: #3831a0;
+  font-weight: 300;
+  margin-top: 2rem;
+  align-items: flex-end;
+  justify-content: center;
+  display: flex;
+  height: 60px;
+}
