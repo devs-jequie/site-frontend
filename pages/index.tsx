@@ -4,7 +4,7 @@ import InputButton from "@/inputs/Button";
 import Input from "@/inputs/Input";
 import TextArea from "@/inputs/TextArea";
 import InputUpload from "@/inputs/InputUpload";
-
+import Footer from "@/components/footer";
 import Link from "next/link";
 
 export default function Home() {
@@ -21,6 +21,8 @@ export default function Home() {
       <TextArea />
 
       <InputUpload />
+
+      <Footer />
     </div>
   );
 }
