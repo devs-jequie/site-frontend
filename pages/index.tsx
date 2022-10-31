@@ -4,12 +4,16 @@ import InputButton from "@/inputs/Button";
 import Input from "@/inputs/Input";
 import TextArea from "@/inputs/TextArea";
 import InputUpload from "@/inputs/InputUpload";
+import Header from "@/components/header";
 
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
+      <Header />
+      <div className={styles.container}>
+      
       <h1>Ola Mundo</h1>
       <h3><Link href="/login"> Login</Link></h3>
       
@@ -22,5 +26,7 @@ export default function Home() {
 
       <InputUpload />
     </div>
+    </div>
+    
   );
 }
