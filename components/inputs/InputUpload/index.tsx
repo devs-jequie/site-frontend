@@ -12,23 +12,24 @@ type InputType = InputHTMLAttributes<HTMLInputElement> & {
   invalid?: boolean;
 };
 
-export default function InputUpload({
+export default function InputUpload( {
   id,
   title,
   placeholder,
-  onChange,
   invalid,
+  onChange,
   ...rest
-}: InputType) {
+}: InputType): JSX.Element {
   const classess = classNames(style["upload-label"], {
     [style["invalid"]]: invalid,
   });
+  
   const [value, setValue] = useState("");
-  const handleSubmit = async (event) => {
+  
+  const handleSubmit = async (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.files[0].name);
-    {
-      onChange;
-    }
+     onChange(event);
+    
   };
   return (
     <div>
@@ -36,7 +37,7 @@ export default function InputUpload({
         <div className={style["container-upload"]}>
           <p className={style["title"]}>{title}</p>
           <label htmlFor={id} className={classess}>
-            {placeholder}
+            {placeholder} 
           </label>
           <input
             id={id}
