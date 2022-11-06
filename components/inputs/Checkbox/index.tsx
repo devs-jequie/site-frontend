@@ -27,8 +27,7 @@ export default function InputGeneral({
                     <span className={style.checkmark}></span>
 
                   </label>
-      {/* <input id={id} className={style.checkbox} {...rest} />
-      <label htmlFor={id} className={style.text}>{title}</label> */}
+     
     </div>
   );
 }

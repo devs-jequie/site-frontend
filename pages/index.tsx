@@ -9,6 +9,9 @@ import Footer from "@/components/footer";
 import Link from "next/link";
 
 export default function Home() {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>)=>{
+    console.log(event.target.files[0].name);
+  }
   return (
     <div>
       <Header />
@@ -22,13 +25,13 @@ export default function Home() {
 
       <Input title="Digite seu nome" />
 
-      <TextArea />
+      <TextArea title="Descrição"/>
 
-      <InputUpload />
+      <InputUpload id="file" onChange={handleChange}  title="selecione um evento" placeholder="selecione um arquivo"/>
 
       <Footer />
     </div>
-    </div>
+   </div>
     
   );
 }
