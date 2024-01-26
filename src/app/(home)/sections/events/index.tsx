@@ -1,7 +1,17 @@
 import React from "react";
 import EventCard from "./components/card";
 
-export default function Events() {
+export default function Events({
+  events,
+}: {
+  events: EntriesResponse<Events>;
+}) {
+  function renderEvents() {
+    return events.items.map((event) => {
+      return <EventCard key={event.fields.slug} event={event.fields} />;
+    });
+  }
+
   return (
     <section
       id="events"
@@ -11,13 +21,7 @@ export default function Events() {
         Meetups e <br />
         eventos:
       </h1>
-      <div className="mt-10 grid grid-cols-3 gap-10">
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-      </div>
+      <div className="mt-10 grid grid-cols-3 gap-10">{renderEvents()}</div>
     </section>
   );
 }

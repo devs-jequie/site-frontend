@@ -1,6 +1,21 @@
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({ headerMenu }: { headerMenu: HeaderMenu }) {
+  const renderLinks = () => {
+    return headerMenu.items.map((link) => {
+      return (
+        <li key={link.fields.label}>
+          <Link
+            className="text-white transition hover:text-white/75"
+            href={link.fields.link}
+          >
+            {link.fields.label}
+          </Link>
+        </li>
+      );
+    });
+  };
+
   return (
     <header className="bg-blue-950">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -25,59 +40,7 @@ export default function Header() {
           <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
-                <li>
-                  <Link
-                    className="text-white transition hover:text-white/75"
-                    href="/"
-                  >
-                    About
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    className="text-white transition hover:text-white/75"
-                    href="/"
-                  >
-                    Careers
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    className="text-white transition hover:text-white/75"
-                    href="/"
-                  >
-                    History
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    className="text-white transition hover:text-white/75"
-                    href="/"
-                  >
-                    Services
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    className="text-white transition hover:text-white/75"
-                    href="/"
-                  >
-                    Projects
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    className="text-white transition hover:text-white/75"
-                    href="/"
-                  >
-                    Blog
-                  </Link>
-                </li>
+                {renderLinks()}
               </ul>
             </nav>
           </div>

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import React from "react";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
-export default function Hero() {
+export default function Hero({ heroData }: { heroData: Hero }) {
   return (
     <section
       id="main"
@@ -12,21 +12,22 @@ export default function Hero() {
       <div className="relative max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
         <div className="max-w-xl ltr:sm:text-left rtl:sm:text-right">
           <h1 className="text-3xl font-extrabold sm:text-5xl text-white">
-            PAPO TECH 2024
+            {heroData?.title}
           </h1>
 
-          <p className="mt-4 text-gray-200 sm:text-xl/relaxed w-auto">
-            Este é o seu momento para mergulhar em discussões envolventes sobre
-            as últimas tendências do mercado, desafios e oportunidades para
-            iniciantes, e tudo mais relacionado ao universo tech.
-          </p>
+          <p
+            className="mt-4 text-gray-200 sm:text-xl/relaxed w-auto"
+            dangerouslySetInnerHTML={{
+              __html: documentToHtmlString(heroData?.description),
+            }}
+          ></p>
 
           <div className="mt-8 flex flex-wrap gap-4 text-center">
             <Link
-              href="#"
+              href={heroData?.buttonLink || "#"}
               className="block uppercase w-full rounded bg-blue-700 px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
             >
-              participar
+              {heroData?.buttonLabel}
             </Link>
           </div>
         </div>

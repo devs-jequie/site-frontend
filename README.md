@@ -1,4 +1,3 @@
-
 # EVENTUS - Frontend
 
 <div align="center">
@@ -30,6 +29,7 @@ Instale as dependências necessárias
 ```
 
 Para executar utilize o comando abaixo:
+
 ```bash
   yarn dev
 ```

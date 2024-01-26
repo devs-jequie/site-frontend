@@ -12,7 +12,6 @@ import styles from "./style.module.css";
 export default function Login() {
   const loginSocial = async (event) => {
     event.preventDefault();
-    console.log(event.target);
 
     alert(`login com: ${event.target}`);
   };
@@ -101,7 +100,9 @@ export default function Login() {
         </div>
 
         <div className={styles.registerContainer}>
-          <Link href="/cadastro"><label>Não possui conta? Cadastre-se!</label></Link>
+          <Link href="/cadastro">
+            <label>Não possui conta? Cadastre-se!</label>
+          </Link>
         </div>
       </div>
     </div>

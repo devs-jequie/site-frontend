@@ -1,12 +1,22 @@
-export default function AnnouncementBar() {
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+
+export default function AnnouncementBar({
+  enabled,
+  content,
+}: {
+  enabled: boolean;
+  content: any;
+}) {
+  if (!enabled) return null;
+
+  const html = documentToHtmlString(content);
+
   return (
     <div className="flex items-center justify-between gap-4 bg-indigo-600 px-4 py-3 text-white">
-      <p className="text-sm font-medium">
-        Curte criar games?{" "}
-        <a href="#" className="inline-block underline">
-          Participe do nosso hackathon!
-        </a>
-      </p>
+      <p
+        className="text-sm font-medium"
+        dangerouslySetInnerHTML={{ __html: html }}
+      ></p>
 
       <button
         aria-label="Dismiss"
