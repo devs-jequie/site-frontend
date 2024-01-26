@@ -1,0 +1,32 @@
+.container-upload {
+  display: flex;
+  flex-direction: column;
+}
+.container-upload > label {
+  padding-left: 5px;
+  margin: 5px 0px;
+}
+.title {
+  padding-left: 5px;
+  margin: 5px 0px;
+}
+.upload-label {
+  padding: 10vh;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+  text-align: center;
+}
+.upload-input {
+  display: none;
+}
+.img-file {
+  height: 5vh;
+  width: 100%;
+}
+.invalid {
+  border: 2px solid;
+  border-color: rgb(236, 116, 116);
+  color: rgb(236, 116, 116);
+}

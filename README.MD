@@ -1,1 +1,0 @@
-# Devs Jequié - Site Frontend
