@@ -13,10 +13,10 @@ export default function AnnouncementBar({
 
   return (
     <div className="flex items-center justify-between gap-4 bg-indigo-600 px-4 py-3 text-white">
-      <p
+      <div
         className="text-sm font-medium"
         dangerouslySetInnerHTML={{ __html: html }}
-      ></p>
+      ></div>
 
       <button
         aria-label="Dismiss"

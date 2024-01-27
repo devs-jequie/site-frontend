@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-bootstrap-icons";
 import { Icon } from "src/components/customIcon";
 
 export default function VoicersCard({ voicer }: { voicer: Voicers }) {

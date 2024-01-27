@@ -1,7 +1,6 @@
 import React from "react";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { Discord, Github, Whatsapp, Youtube } from "react-bootstrap-icons";
-
+import { FaDiscord, FaGithub, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import CommunityCard from "./components/card";
 import { DevtoIcon } from "./components/icons";
 import DividerRoadmap from "../../../../components/roadmapDivider";
@@ -24,12 +23,12 @@ export default function Community({
               {title}
             </h2>
 
-            <p
+            <div
               className="mt-4 text-gray-400 text-left"
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(description),
               }}
-            ></p>
+            ></div>
 
             <a
               href={buttonLink || "#"}
@@ -43,17 +42,17 @@ export default function Community({
             <CommunityCard
               label="Whatsapp"
               description="Engajamento e interação com a comunidade"
-              icon={<Whatsapp />}
+              icon={<FaWhatsapp />}
             />
             <CommunityCard
               label="Discord"
               description="Live code e competições"
-              icon={<Discord />}
+              icon={<FaDiscord />}
             />
             <CommunityCard
               label="Youtube"
               description="Vídeos gravados e lives"
-              icon={<Youtube />}
+              icon={<FaYoutube />}
             />
             <CommunityCard
               label="Dev.to"
@@ -63,7 +62,7 @@ export default function Community({
             <CommunityCard
               label="Github"
               description="Repositorios da comunidade"
-              icon={<Github />}
+              icon={<FaGithub />}
             />
           </div>
         </div>
