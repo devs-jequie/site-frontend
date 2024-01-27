@@ -15,12 +15,12 @@ export default function Hero({ heroData }: { heroData: Hero }) {
             {heroData?.title}
           </h1>
 
-          <p
+          <div
             className="mt-4 text-gray-200 sm:text-xl/relaxed w-auto"
             dangerouslySetInnerHTML={{
               __html: documentToHtmlString(heroData?.description),
             }}
-          ></p>
+          ></div>
 
           <div className="mt-8 flex flex-wrap gap-4 text-center">
             <Link

@@ -1,7 +1,7 @@
 import style from "./style.module.css";
 import { InputHTMLAttributes, useState } from "react";
 import classNames from "classnames";
-import { FileEarmarkArrowUp } from "react-bootstrap-icons";
+import { FaFileUpload } from "react-icons/fa";
 
 type InputType = InputHTMLAttributes<HTMLInputElement> & {
   small?: boolean;
@@ -12,7 +12,7 @@ type InputType = InputHTMLAttributes<HTMLInputElement> & {
   invalid?: boolean;
 };
 
-export default function InputUpload( {
+export default function InputUpload({
   id,
   title,
   placeholder,
@@ -23,13 +23,14 @@ export default function InputUpload( {
   const classess = classNames(style["upload-label"], {
     [style["invalid"]]: invalid,
   });
-  
+
   const [value, setValue] = useState("");
-  
+
   const handleSubmit = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    //@ts-ignore
     setValue(event.target.files[0].name);
-     onChange(event);
-    
+    //@ts-ignore
+    onChange(event);
   };
   return (
     <div>
@@ -37,7 +38,7 @@ export default function InputUpload( {
         <div className={style["container-upload"]}>
           <p className={style["title"]}>{title}</p>
           <label htmlFor={id} className={classess}>
-            {placeholder} 
+            {placeholder}
           </label>
           <input
             id={id}
@@ -51,7 +52,7 @@ export default function InputUpload( {
         <div className={style["container-upload"]}>
           {title}
           <label htmlFor={id} className={classess}>
-            <FileEarmarkArrowUp className={style["img-file"]} /> {value}
+            <FaFileUpload className={style["img-file"]} /> {value}
           </label>
           <input
             id={id}

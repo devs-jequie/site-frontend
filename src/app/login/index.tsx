@@ -1,7 +1,7 @@
 import Link from "next/link";
-import InputButton from "@/inputs/Button";
-import Input from "@/inputs/Input";
-import InputCheckbox from "@/inputs/Checkbox";
+import InputButton from "../../components/inputs/Button";
+import Input from "../../components/inputs/Input";
+import InputCheckbox from "../../components/inputs/Checkbox";
 import {
   FacebookLoginButton,
   GoogleLoginButton,
